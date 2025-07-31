@@ -10,11 +10,15 @@ const allowedOrigins = [
 ];
 
 function getCorsHeaders(origin: string | null): Headers {
+  console.log("Incoming Origin:", origin);
   const headers = new Headers();
   if (origin && allowedOrigins.includes(origin)) {
+    console.log("Origin allowed:", origin);
     headers.set("Access-Control-Allow-Origin", origin);
     headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  } else {
+    console.log("Origin NOT allowed:", origin);
   }
   return headers;
 }
