@@ -3,7 +3,7 @@
 client_id = "1b97ead69c107e352214755a47c5c557"
 name = "RCS360 Connect"
 handle = "rcs360-connect"
-application_url = "https://egyptian-mali-newer-medication.trycloudflare.com"
+application_url = "https://incidence-itself-pac-relying.trycloudflare.com"
 embedded = true
 
 [build]
@@ -28,9 +28,9 @@ scopes = "read_products,write_products,read_product_listings,read_customers,writ
 
 [auth]
 redirect_urls = [
-  "https://egyptian-mali-newer-medication.trycloudflare.com/auth/callback",
-  "https://egyptian-mali-newer-medication.trycloudflare.com/auth/shopify/callback",
-  "https://egyptian-mali-newer-medication.trycloudflare.com/api/auth/callback"
+  "https://incidence-itself-pac-relying.trycloudflare.com/auth/callback",
+  "https://incidence-itself-pac-relying.trycloudflare.com/auth/shopify/callback",
+  "https://incidence-itself-pac-relying.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
