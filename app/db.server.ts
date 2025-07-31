@@ -26,6 +26,11 @@ let firestore: FirebaseFirestore.Firestore;
 console.log("🔧 Checking existing Firebase apps - in db.server.ts");
 if (!getApps().length) {
   console.log("🔧 No Firebase app found, initializing Firebase Admin");
+  console.log("🔍 Checking Firebase environment variables:");
+console.log("FIREBASE_PROJECT_ID:", process.env.FIREBASE_PROJECT_ID);
+console.log("FIREBASE_CLIENT_EMAIL:", process.env.FIREBASE_CLIENT_EMAIL);
+console.log("FIREBASE_PRIVATE_KEY present:", !!process.env.FIREBASE_PRIVATE_KEY);
+console.log("FIREBASE_PRIVATE_KEY length:", process.env.FIREBASE_PRIVATE_KEY?.length);
   const serviceAccount = {
     projectId: process.env.FIREBASE_PROJECT_ID,
     clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
