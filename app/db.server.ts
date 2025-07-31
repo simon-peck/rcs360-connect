@@ -23,7 +23,7 @@ console.log("🔧 PrismaClient instance ready");
 
 let firestore: FirebaseFirestore.Firestore;
 
-console.log("🔧 Checking existing Firebase apps");
+console.log("🔧 Checking existing Firebase apps - in db.server.ts");
 if (!getApps().length) {
   console.log("🔧 No Firebase app found, initializing Firebase Admin");
   const serviceAccount = {
