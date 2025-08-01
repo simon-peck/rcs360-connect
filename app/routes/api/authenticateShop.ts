@@ -4,6 +4,8 @@ import { json } from "@remix-run/node";
 import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 
+console.log("🔄 Loaded /api/authenticateShop route");
+
 // Removed getCorsHeaders and allowedOrigins since CORS is now handled centrally
 
 if (getApps().length === 0) {
