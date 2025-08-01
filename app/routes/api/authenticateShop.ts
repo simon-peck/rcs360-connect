@@ -4,24 +4,7 @@ import { json } from "@remix-run/node";
 import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 
-const allowedOrigins = [
-  "https://admin.shopify.com",
-  "https://app.rcs360.co.uk",
-];
-
-function getCorsHeaders(origin: string | null): Headers {
-  console.log("Incoming Origin:", origin);
-  const headers = new Headers();
-  if (origin && allowedOrigins.includes(origin)) {
-    console.log("Origin allowed:", origin);
-    headers.set("Access-Control-Allow-Origin", origin);
-    headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-    headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  } else {
-    console.log("Origin NOT allowed:", origin);
-  }
-  return headers;
-}
+// Removed getCorsHeaders and allowedOrigins since CORS is now handled centrally
 
 if (getApps().length === 0) {
   console.log("🔑 Initializing Firebase Admin SDK");
@@ -43,33 +26,14 @@ if (getApps().length === 0) {
 const auth = getAuth();
 
 export const loader = async ({ request }: { request: Request }) => {
-  const origin = request.headers.get("origin");
-  const corsHeaders = getCorsHeaders(origin);
-
-  // Handle CORS preflight request
-  if (request.method === "OPTIONS") {
-    return new Response(null, {
-      status: 204,
-      headers: corsHeaders,
-    });
-  }
+  // Removed CORS headers and OPTIONS handling here
   return json({ error: "GET not supported" }, {
     status: 405,
-    headers: corsHeaders,
   });
 };
 
 export const action: ActionFunction = async ({ request }) => {
-  const origin = request.headers.get("origin");
-  const corsHeaders = getCorsHeaders(origin);
-
-  if (request.method === "OPTIONS") {
-    // Preflight CORS response
-    return new Response(null, {
-      status: 204,
-      headers: corsHeaders,
-    });
-  }
+  // Removed CORS headers and OPTIONS handling here
 
   console.log("🚀 authenticateShop action started");
   try {
@@ -80,12 +44,12 @@ export const action: ActionFunction = async ({ request }) => {
 
     if (!shopDomain) {
       console.warn("⚠️ Missing shopDomain in request");
-      return json({ error: "Missing shopDomain" }, { status: 400, headers: corsHeaders });
+      return json({ error: "Missing shopDomain" }, { status: 400 });
     }
 
     if (!shopDomain.match(/^[a-zA-Z0-9][a-zA-Z0-9\-]*\.myshopify\.com$/)) {
       console.warn("⚠️ Invalid shopDomain format:", shopDomain);
-      return json({ error: "Invalid shopDomain format" }, { status: 400, headers: corsHeaders });
+      return json({ error: "Invalid shopDomain format" }, { status: 400 });
     }
 
     const uid = `shop:${shopDomain}`;
@@ -105,7 +69,7 @@ export const action: ActionFunction = async ({ request }) => {
         console.log(`✅ Created user: ${uid}`);
       } else {
         console.error("🔥 Firebase Auth error:", err);
-        return json({ error: err.message }, { status: 500, headers: corsHeaders });
+        return json({ error: err.message }, { status: 500 });
       }
     }
 
@@ -122,7 +86,6 @@ export const action: ActionFunction = async ({ request }) => {
 
     return json({ token }, {
       headers: {
-        ...corsHeaders,
         "Content-Type": "application/json",
       },
     });
@@ -130,7 +93,6 @@ export const action: ActionFunction = async ({ request }) => {
     console.error("🔥 Error in authenticateShop:", error);
     return json({ error: error.message || "Unknown error" }, {
       status: 500,
-      headers: corsHeaders,
     });
   }
 };
