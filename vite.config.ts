@@ -43,16 +43,6 @@ const routeFiles = readdirSync(routesDir, { recursive: true, encoding: "utf-8" }
   .map((file) => (file as string).replace(/\\/g, "/"));
 console.log("Manually discovered routes (app/routes):", routeFiles);
 
-const serverRoutesDir = join(process.cwd(), "app/server");
-const serverRouteFiles = readdirSync(serverRoutesDir, { recursive: true, encoding: "utf-8" })
-  .filter(
-    (file) =>
-      typeof file === "string" &&
-      (file.endsWith(".ts") || file.endsWith(".tsx") || file.endsWith(".server.tsx"))
-  )
-  .map((file) => join("server", file).replace(/\\/g, "/"));
-console.log("Manually discovered server routes (app/server):", serverRouteFiles);
-
 export default defineConfig({
   server: {
     allowedHosts: [host],
