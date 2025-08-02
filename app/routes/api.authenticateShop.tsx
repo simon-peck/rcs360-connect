@@ -1,12 +1,10 @@
-// app/routes/api/authenticateShop.ts
+// app/routes/api.authenticateShop.server.tsx
 import type { ActionFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { initializeApp, cert, getApps } from "firebase-admin/app";
 import { getAuth } from "firebase-admin/auth";
 
 console.log("🔄 Loaded /api/authenticateShop route");
-
-// Removed getCorsHeaders and allowedOrigins since CORS is now handled centrally
 
 if (getApps().length === 0) {
   console.log("🔑 Initializing Firebase Admin SDK");
@@ -28,20 +26,14 @@ if (getApps().length === 0) {
 const auth = getAuth();
 
 export const loader = async ({ request }: { request: Request }) => {
-  // Removed CORS headers and OPTIONS handling here
-  return json({ error: "GET not supported" }, {
-    status: 405,
-  });
+  return json({ error: "GET not supported" }, { status: 405 });
 };
 
 export const action: ActionFunction = async ({ request }) => {
-  // Removed CORS headers and OPTIONS handling here
-
   console.log("🚀 authenticateShop action started");
   try {
     const body = await request.json();
     console.log("📥 Received request body:", body);
-
     const { shopDomain, shopOwnerEmail = "unknown@rcs360.co.uk" } = body;
 
     if (!shopDomain) {
@@ -56,7 +48,6 @@ export const action: ActionFunction = async ({ request }) => {
 
     const uid = `shop:${shopDomain}`;
     let user;
-
     try {
       console.log(`🔍 Attempting to get user with uid: ${uid}`);
       user = await auth.getUser(uid);
@@ -75,26 +66,20 @@ export const action: ActionFunction = async ({ request }) => {
       }
     }
 
-    console.log(`🔧 Setting custom claims for uid: ${user.uid}`);
-    await auth.setCustomUserClaims(user.uid, { shopDomain });
+    console.log(`🔧 Setting custom claims for uid: ${uid}`); // Use original uid
+    await auth.setCustomUserClaims(uid, { shopDomain }); // Use original uid
     console.log("✅ Custom claims set");
 
-    const updatedUser = await auth.getUser(user.uid);
+    const updatedUser = await auth.getUser(uid);
     console.log("🔑 User custom claims:", updatedUser.customClaims);
 
-    console.log(`🔑 Creating custom token for uid: ${user.uid}`);
-    const token = await auth.createCustomToken(user.uid);
+    console.log(`🔑 Creating custom token for uid: ${uid}`);
+    const token = await auth.createCustomToken(uid); // Use original uid
     console.log("✅ Custom token created");
 
-    return json({ token }, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    return json({ token });
   } catch (error: any) {
     console.error("🔥 Error in authenticateShop:", error);
-    return json({ error: error.message || "Unknown error" }, {
-      status: 500,
-    });
+    return json({ error: error.message || "Unknown error" }, { status: 500 });
   }
 };

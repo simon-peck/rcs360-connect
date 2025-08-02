@@ -1,3 +1,4 @@
+// app/shopify.server.ts
 import "@shopify/shopify-app-remix/adapters/node";
 import {
   ApiVersion,
@@ -5,7 +6,7 @@ import {
   shopifyApp,
 } from "@shopify/shopify-app-remix/server";
 import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
-import prisma from "./db.server";
+import { prisma } from "./db.server"; // Updated to named import
 
 console.log("🚀 SHOPIFY_APP_URL:", process.env.SHOPIFY_APP_URL);
 
@@ -13,7 +14,7 @@ const shopify = shopifyApp({
   apiKey: process.env.SHOPIFY_API_KEY,
   apiSecretKey: process.env.SHOPIFY_API_SECRET || "",
   apiVersion: ApiVersion.January25,
-  scopes: process.env.SCOPES?.split(","),
+  scopes: process.env.SCOPES?.split(",") || ["read_products", "write_products"],
   appUrl: process.env.SHOPIFY_APP_URL || "",
   authPathPrefix: "/auth",
   sessionStorage: new PrismaSessionStorage(prisma),

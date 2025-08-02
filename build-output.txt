@@ -1,0 +1,238 @@
+
+> build
+> prisma generate && remix vite:build
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.12.0) to ./node_modules/@prisma/client in 29ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+(node:2049) ExperimentalWarning: CommonJS module /Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/vite-node/dist/server.cjs is loading ES Module /Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/vite/dist/node/index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Manually discovered routes (app/routes): [
+  '.auth.$.tsx',
+  '.webhooks.app.scopes_update.tsx',
+  '.webhooks.app.uninstalled.tsx',
+  'api.authenticateShop.tsx',
+  'api.saveShopData.tsx',
+  'app._index.tsx',
+  'app.additional.tsx',
+  'app.tsx',
+  '_index/route.tsx',
+  'auth.login/error.server.tsx',
+  'auth.login/route.tsx'
+]
+Manually discovered server routes (app/server): []
+Manually discovered routes (app/routes): [
+  '.auth.$.tsx',
+  '.webhooks.app.scopes_update.tsx',
+  '.webhooks.app.uninstalled.tsx',
+  'api.authenticateShop.tsx',
+  'api.saveShopData.tsx',
+  'app._index.tsx',
+  'app.additional.tsx',
+  'app.tsx',
+  '_index/route.tsx',
+  'auth.login/error.server.tsx',
+  'auth.login/route.tsx'
+]
+Manually discovered server routes (app/server): []
+Manually discovered routes (app/routes): [
+  '.auth.$.tsx',
+  '.webhooks.app.scopes_update.tsx',
+  '.webhooks.app.uninstalled.tsx',
+  'api.authenticateShop.tsx',
+  'api.saveShopData.tsx',
+  'app._index.tsx',
+  'app.additional.tsx',
+  'app.tsx',
+  '_index/route.tsx',
+  'auth.login/error.server.tsx',
+  'auth.login/route.tsx'
+]
+Manually discovered server routes (app/server): []
+Manually discovered routes (app/routes): [
+  '.auth.$.tsx',
+  '.webhooks.app.scopes_update.tsx',
+  '.webhooks.app.uninstalled.tsx',
+  'api.authenticateShop.tsx',
+  'api.saveShopData.tsx',
+  'app._index.tsx',
+  'app.additional.tsx',
+  'app.tsx',
+  '_index/route.tsx',
+  'auth.login/error.server.tsx',
+  'auth.login/route.tsx'
+]
+Manually discovered server routes (app/server): []
+vite v6.3.5 building for production...
+transforming...
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/firebase-admin/lib/app/lifecycle.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/firebase-admin/lib/app/lifecycle.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/firebase-admin/lib/app/credential-internal.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/firebase-admin/lib/app/credential-internal.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/firebase-admin/lib/utils/validator.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/firebase-admin/lib/utils/validator.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "events" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/authclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "events" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/authclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/oauth2client.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/oauth2client.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/oauth2client.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/oauth2client.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/baseexternalclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/baseexternalclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/downscopedclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/downscopedclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/refreshclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/refreshclient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/build/src/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/build/src/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/build/src/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/build/src/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/filesubjecttokensupplier.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/filesubjecttokensupplier.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/stscredentials.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/stscredentials.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/common.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/common.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jws/lib/sign-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jws/lib/sign-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jws/lib/verify-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jws/lib/verify-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/crypto/node/crypto.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/crypto/node/crypto.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/oauth2common.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/oauth2common.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jwa/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jwa/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jws/lib/sign-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jws/lib/sign-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jws/lib/data-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/node_modules/jws/lib/data-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jws/lib/verify-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jws/lib/verify-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/googleauth.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jws/lib/data-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jws/lib/data-stream.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jwa/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "crypto" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gtoken/node_modules/jwa/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/externalAccountAuthorizedUserClient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/externalAccountAuthorizedUserClient.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "https" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "https" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "querystring" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gaxios/build/src/gaxios.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/pluggable-auth-handler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/pluggable-auth-handler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gcp-metadata/build/src/gcp-residency.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gcp-metadata/build/src/gcp-residency.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/pluggable-auth-handler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-auth-library/build/src/auth/pluggable-auth-handler.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gcp-metadata/build/src/gcp-residency.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "os" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/gcp-metadata/build/src/gcp-residency.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "net" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "tls" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "assert" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "net" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "tls" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "assert" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "url" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/https-proxy-agent/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "net" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "http" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "https" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "net" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "http" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "https" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/index.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:events" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-logging-utils/build/src/logging-utils.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:process" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-logging-utils/build/src/logging-utils.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:util" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-logging-utils/build/src/logging-utils.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:events" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-logging-utils/build/src/logging-utils.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:process" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-logging-utils/build/src/logging-utils.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "node:util" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/google-logging-utils/build/src/logging-utils.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "http" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/helpers.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "https" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/helpers.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "http" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/helpers.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin vite:resolve] Module "https" has been externalized for browser compatibility, imported by "/Users/simonpeck/Development/Apps_Src/shopify_abandoned_cart/rcs360-connect/node_modules/agent-base/dist/helpers.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+✓ 1808 modules transformed.
+Generated an empty chunk: "root".
+Generated an empty chunk: "api.saveShopData".
+rendering chunks...
+computing gzip size...
+build/client/.vite/manifest.json                        4.54 kB │ gzip:   0.78 kB
+build/client/assets/styles-DqWBAKNB.css               441.20 kB │ gzip:  52.14 kB
+build/client/assets/root-l0sNRNKZ.js                    0.00 kB │ gzip:   0.02 kB
+build/client/assets/api.saveShopData-l0sNRNKZ.js        0.00 kB │ gzip:   0.02 kB
+build/client/assets/route-ulOSOw3d.js                   0.04 kB │ gzip:   0.06 kB
+build/client/assets/_commonjsHelpers-D6-XlEtG.js        0.73 kB │ gzip:   0.38 kB
+build/client/assets/app.additional-CW36OZAW.js          1.64 kB │ gzip:   0.76 kB
+build/client/assets/route-DdQqBaoM.js                   1.68 kB │ gzip:   0.90 kB
+build/client/assets/TitleBar-DXsEHxpg.js                2.67 kB │ gzip:   0.97 kB
+build/client/assets/entry.client-D5usv2EU.js            3.90 kB │ gzip:   1.48 kB
+build/client/assets/app._index-iCMRfT98.js              5.02 kB │ gzip:   1.68 kB
+build/client/assets/styles-D0DUOBTM.js                  5.93 kB │ gzip:   2.44 kB
+build/client/assets/app-C474lmQ_.js                    46.45 kB │ gzip:  15.24 kB
+build/client/assets/Page-f6iZDqm3.js                   87.34 kB │ gzip:  26.68 kB
+build/client/assets/components-D9W-tPmn.js            109.40 kB │ gzip:  35.68 kB
+build/client/assets/index-D8r8JfO7.js                 143.20 kB │ gzip:  45.92 kB
+build/client/assets/context-Bbg53KVP.js               151.69 kB │ gzip:  17.06 kB
+build/client/assets/api.authenticateShop-Cxdrx1H_.js  586.33 kB │ gzip: 167.29 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.38s
+Manually discovered routes (app/routes): [
+  '.auth.$.tsx',
+  '.webhooks.app.scopes_update.tsx',
+  '.webhooks.app.uninstalled.tsx',
+  'api.authenticateShop.tsx',
+  'api.saveShopData.tsx',
+  'app._index.tsx',
+  'app.additional.tsx',
+  'app.tsx',
+  '_index/route.tsx',
+  'auth.login/error.server.tsx',
+  'auth.login/route.tsx'
+]
+Manually discovered server routes (app/server): []
+Manually discovered routes (app/routes): [
+  '.auth.$.tsx',
+  '.webhooks.app.scopes_update.tsx',
+  '.webhooks.app.uninstalled.tsx',
+  'api.authenticateShop.tsx',
+  'api.saveShopData.tsx',
+  'app._index.tsx',
+  'app.additional.tsx',
+  'app.tsx',
+  '_index/route.tsx',
+  'auth.login/error.server.tsx',
+  'auth.login/route.tsx'
+]
+Manually discovered server routes (app/server): []
+vite v6.3.5 building SSR bundle for production...
+transforming...
+Module "node_modules/@shopify/shopify-app-remix/dist/esm/react/components/AppProvider/AppProvider.mjs" tried to import "node_modules/@shopify/polaris/locales/en.json" with "type": "json" attributes, but it was already imported elsewhere with no attributes. Please ensure that import attributes for the same module are always consistent.
+✓ 745 modules transformed.
+rendering chunks...
+build/server/.vite/manifest.json             0.53 kB
+build/server/assets/styles-DqWBAKNB.css    441.20 kB
+build/server/index.js                    1,166.00 kB
+✓ built in 657ms

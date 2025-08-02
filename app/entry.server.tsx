@@ -1,19 +1,17 @@
-import { PassThrough } from "stream";
+// app/entry.server.tsx
+//import { PassThrough } from "stream";
+import { PassThrough } from "node:stream";
 import { renderToPipeableStream } from "react-dom/server";
 import { RemixServer } from "@remix-run/react";
-import {
-  createReadableStreamFromReadable,
-  type EntryContext,
-} from "@remix-run/node";
+import { createReadableStreamFromReadable, type EntryContext } from "@remix-run/node";
 import { isbot } from "isbot";
-import { addDocumentResponseHeaders } from "./shopify.server";
 
 export const streamTimeout = 5000;
 
 const allowedOrigins = [
   "https://admin.shopify.com",
   "https://app.rcs360.co.uk",
-  "https://rcs360-connect.vercel.app"
+  "https://rcs360-connect.vercel.app",
 ];
 
 function getCorsHeaders(origin: string | null): HeadersInit | undefined {
@@ -22,6 +20,7 @@ function getCorsHeaders(origin: string | null): HeadersInit | undefined {
       "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      "Access-Control-Max-Age": "86400",
     };
   }
   return undefined;
@@ -33,9 +32,10 @@ export default async function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext
 ) {
-  // Handle CORS preflight requests early
+  console.log(`Request URL: ${request.url}, Method: ${request.method}`);
   if (request.method === "OPTIONS") {
     const origin = request.headers.get("origin");
+    console.log(`Handling OPTIONS request for ${request.url}, Origin: ${origin}`);
     const corsHeaders = getCorsHeaders(origin);
     return new Response(null, {
       status: 204,
@@ -43,15 +43,12 @@ export default async function handleRequest(
     });
   }
 
-  addDocumentResponseHeaders(request, responseHeaders);
+  // Removed addDocumentResponseHeaders import and call; handle headers manually if needed
   const userAgent = request.headers.get("user-agent");
-  const callbackName = isbot(userAgent ?? '')
-    ? "onAllReady"
-    : "onShellReady";
-
-  // Add CORS headers to response headers if origin is allowed
+  const callbackName = isbot(userAgent ?? "") ? "onAllReady" : "onShellReady";
   const origin = request.headers.get("origin");
   const corsHeaders = getCorsHeaders(origin);
+
   if (corsHeaders) {
     Object.entries(corsHeaders).forEach(([key, value]) => {
       responseHeaders.set(key, value);
@@ -60,15 +57,11 @@ export default async function handleRequest(
 
   return new Promise((resolve, reject) => {
     const { pipe, abort } = renderToPipeableStream(
-      <RemixServer
-        context={remixContext}
-        url={request.url}
-      />,
+      <RemixServer context={remixContext} url={request.url} />,
       {
         [callbackName]: () => {
           const body = new PassThrough();
           const stream = createReadableStreamFromReadable(body);
-
           responseHeaders.set("Content-Type", "text/html");
           resolve(
             new Response(stream, {
@@ -78,18 +71,15 @@ export default async function handleRequest(
           );
           pipe(body);
         },
-        onShellError(error) {
+        onShellError: (error: unknown) => {
           reject(error);
         },
-        onError(error) {
+        onError: (error: unknown) => {
           responseStatusCode = 500;
-          console.error(error);
+          console.error("Render error:", error);
         },
       }
     );
-
-    // Automatically timeout the React renderer after 6 seconds, which ensures
-    // React has enough time to flush down the rejected boundary contents
     setTimeout(abort, streamTimeout + 1000);
   });
 }

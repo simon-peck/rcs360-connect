@@ -1,26 +1,16 @@
-// app/routes/api/saveShopData.ts
-import type { LoaderFunctionArgs, ActionFunction } from "@remix-run/node";
+// app/routes/api.saveShopData.server.tsx
+import type { ActionFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { getFirestore } from "firebase-admin/firestore";
-import { initializeApp, cert, getApps } from "firebase-admin/app";
+import { dbFirestore } from "../db.server";
+import { firestore } from "firebase-admin"; // Added import for the Firestore type
 
-// Ensure Firebase is only initialized once
-if (getApps().length === 0) {
-  initializeApp({
-    credential: cert({
-      projectId: process.env.FIREBASE_PROJECT_ID!,
-      clientEmail: process.env.FIREBASE_CLIENT_EMAIL!,
-      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n")!,
-    }),
-  });
-}
-
-const db = getFirestore();
+const db = dbFirestore as firestore.Firestore; // Updated type assertion with imported Firestore type
 
 export const action: ActionFunction = async ({ request }) => {
+  console.log("🚀 saveShopData action started");
   try {
     const body = await request.json();
-
+    console.log("📥 Received request body:", body);
     const {
       shopDomain,
       shopName,
@@ -32,6 +22,7 @@ export const action: ActionFunction = async ({ request }) => {
     } = body;
 
     if (!shopDomain) {
+      console.warn("⚠️ Missing shopDomain in request");
       return json({ error: "Missing shopDomain" }, { status: 400 });
     }
 
@@ -71,6 +62,7 @@ export const action: ActionFunction = async ({ request }) => {
       dataHash: "",
     });
 
+    console.log("✅ Shop data saved for:", shopDomain);
     return json({ success: true });
   } catch (error: any) {
     console.error("🔥 Error saving shop data:", error);
@@ -81,7 +73,3 @@ export const action: ActionFunction = async ({ request }) => {
 export const loader = async () => {
   return json({ error: "GET not supported" }, { status: 405 });
 };
-
-export default function SaveShopDataRoute() {
-  return null;
-}
