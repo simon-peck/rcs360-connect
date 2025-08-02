@@ -3,7 +3,7 @@
 client_id = "1b97ead69c107e352214755a47c5c557"
 name = "RCS360 Connect"
 handle = "rcs360-connect"
-application_url = "https://salon-distributed-skirt-presidential.trycloudflare.com"
+application_url = "https://held-infected-refer-listed.trycloudflare.com"
 embedded = true
 
 [build]
@@ -28,9 +28,9 @@ scopes = "read_products,write_products,read_product_listings,read_customers,writ
 
 [auth]
 redirect_urls = [
-  "https://salon-distributed-skirt-presidential.trycloudflare.com/auth/callback",
-  "https://salon-distributed-skirt-presidential.trycloudflare.com/auth/shopify/callback",
-  "https://salon-distributed-skirt-presidential.trycloudflare.com/api/auth/callback"
+  "https://held-infected-refer-listed.trycloudflare.com/auth/callback",
+  "https://held-infected-refer-listed.trycloudflare.com/auth/shopify/callback",
+  "https://held-infected-refer-listed.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

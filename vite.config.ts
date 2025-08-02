@@ -80,7 +80,6 @@ export default defineConfig({
       "@shopify/shopify-app-session-storage-prisma",
       "@shopify/polaris",
       "isbot",
-      "firebase-admin",
       "@google-cloud/firestore",
       "node:stream",
       "node:crypto",
@@ -90,16 +89,17 @@ export default defineConfig({
       "node:path",
       "node:util",
     ],
-    external: ["app/shopify.server", "app/db.server"],
+    external: [
+      "firebase-admin", // ✅ Let node handle it as CJS
+      "app/shopify.server",
+      "app/db.server",
+    ],
   },
   optimizeDeps: {
     include: ["@shopify/app-bridge-react", "@shopify/polaris"],
     esbuildOptions: {
       mainFields: ["module", "main"],
       target: "es2022", // Added to align with build.target and improve compatibility
-      supported: {
-        importMeta: true,
-      },
     },
   },
 });
